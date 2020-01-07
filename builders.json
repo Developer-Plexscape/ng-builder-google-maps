@@ -1,0 +1,9 @@
+{
+  "builders": {
+    "gmaps": {
+      "implementation": "./dist",
+      "schema": "./dist/schema.json",
+      "description": "Adds Google Maps in the index.html file."
+    }
+  }
+}
