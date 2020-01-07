@@ -1,7 +1,16 @@
 {
   "name": "ng-builder-google-maps",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Angular CLI builder that adds the Google Maps API into your application",
+  "keywords": [
+    "angular",
+    "google",
+    "maps"
+  ],
+  "bugs": {
+    "url": "https://github.com/Developer-Plexscape/ng-builder-google-maps/issues"
+  },
+  "homepage": "https://github.com/Developer-Plexscape/ng-builder-google-maps#readme",
   "main": "dist/index.js",
   "builders": "builders.json",
   "scripts": {
