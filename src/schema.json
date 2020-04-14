@@ -2,10 +2,10 @@
   "$schema": "http://json-schema.org/schema",
   "type": "object",
   "properties": {
-    "inFile": {
+    "configuration": {
       "type": "string"
     },
-    "outFile": {
+    "outputPath": {
       "type": "string"
     },
     "version": {
