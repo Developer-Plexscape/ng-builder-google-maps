@@ -1,6 +1,6 @@
 {
   "name": "ng-builder-google-maps",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Angular CLI builder that adds the Google Maps API into your application",
   "keywords": [
     "angular",
