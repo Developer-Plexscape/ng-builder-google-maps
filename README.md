@@ -1,6 +1,5 @@
 <h1 align="center">Welcome to ng-builder-google-maps 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.4-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/plexearth" target="_blank">
     <img alt="Twitter: plexearth" src="https://img.shields.io/twitter/follow/plexearth.svg?style=social" />
   </a>
@@ -15,19 +14,10 @@ The builder essentially creates a new `index.html` file that loads the Google Ma
 ## Install
 
 ```sh
-npm install ng-builder-google-maps
+ng add ng-builder-google-maps
 ```
 
 ## Usage
-
-To use the builder, first you need to add a new architect entry in the **angular.json** file.
-
-```
-"google-maps": {
-  "builder": "ng-builder-google-maps:gmaps",
-  "options": {}
-}
-```
 
 The builder accepts the following options:
 
