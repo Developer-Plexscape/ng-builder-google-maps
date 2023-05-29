@@ -21,7 +21,7 @@ ng add ng-builder-google-maps
 
 The builder accepts the following options:
 
-- `outputPath`: The path of the destination HTML file (e.g `dist/my-app/index-gm.html`)
+- `output-path`: The path of the destination HTML file (e.g `dist/my-app/index-gm.html`)
 - `version`: The version of the Google Maps API to use (e.g. 3.37)
 - `key`: *(optional)* Your Google Maps API key
 - `configuration`: *(optional)* The configuration of the build target to use. By default this is empty string (development)
