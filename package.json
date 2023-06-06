@@ -4,8 +4,7 @@
   "description": "Angular CLI builder that adds the Google Maps API into your application",
   "keywords": [
     "angular",
-    "google",
-    "maps"
+    "googlemaps"
   ],
   "bugs": {
     "url": "https://github.com/Developer-Plexscape/ng-builder-google-maps/issues"
