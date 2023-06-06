@@ -5,9 +5,9 @@
   </a>
 </p>
 
-> Angular CLI builder that adds the Google Maps API into your application
+> Angular Google Maps builder
 
-The builder essentially creates a new `index.html` file that loads the Google Maps API. That way you can maintain different versions of your Angular application with Google Maps or not. Especially useful for Electron applications that can operate in two modes, one of them with Google Maps.
+An Angular CLI builder that adds the Google Maps JavaScript API into an Angular application.
 
 ### 🏠 [Homepage](https://github.com/Developer-Plexscape/ng-builder-google-maps)
 
@@ -19,16 +19,20 @@ ng add ng-builder-google-maps
 
 ## Usage
 
+```sh
+ng run [project-name]:google-maps
+```
+
 The builder accepts the following options:
 
-- `output-path`: The path of the destination HTML file (e.g `dist/my-app/index-gm.html`)
+- `outputPath`: The path of the destination HTML file (e.g `dist/my-app/index.html`)
 - `version`: The version of the Google Maps API to use (e.g. 3.37)
 - `key`: *(optional)* Your Google Maps API key
 - `configuration`: *(optional)* The configuration of the build target to use. By default this is empty string (development)
 
-You can then run it using the command below:
+You can pass the previous options either in the `angular.json` file or when running the builder from the terminal:
 
-`ng run [project-name]:google-maps`
+> Remember that options need to be typed in kebab-case format from the terminal!
 
 ## Author
 

@@ -1,6 +1,6 @@
 {
   "name": "ng-builder-google-maps",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Angular CLI builder that adds the Google Maps API into your application",
   "keywords": [
     "angular",
@@ -19,21 +19,23 @@
   "scripts": {
     "build": "tsc && npm run build:schematics",
     "build:schematics": "tsc -p tsconfig.schematics.json",
-    "copy:schema": "cp src/schema.json dist/schema.json",
-    "copy:schematics": "cp schematics/*.json dist/schematics",
+    "copy:schema": "copyfiles src/schema.json dist -f",
+    "copy:schematics": "copyfiles schematics/*.json dist",
     "postbuild": "npm run copy:schema && npm run copy:schematics"
   },
   "devDependencies": {
+    "@schematics/angular": "16.0.4",
     "@types/jasmine": "~4.3.2",
     "@types/node": "^20.2.5",
+    "copyfiles": "^2.4.1",
     "jasmine": "^5.0.0",
     "jasmine-node": "^3.0.0",
     "ts-node": "~10.9.1",
     "typescript": "~5.0.4"
   },
   "dependencies": {
-    "@angular-devkit/architect": "0.1600.3",
-    "@angular-devkit/schematics": "16.0.3"
+    "@angular-devkit/architect": "0.1600.4",
+    "@angular-devkit/schematics": "16.0.4"
   },
   "schematics": "./dist/schematics/collection.json"
 }
