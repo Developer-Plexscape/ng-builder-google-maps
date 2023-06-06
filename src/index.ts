@@ -5,7 +5,7 @@ import { readFile, writeFile } from 'fs';
 interface Options extends JsonObject {
   version: number;
   key: string;
-  configuration: string,
+  workspaceConfig: string,
   outputPath: string;
 }
 
@@ -16,7 +16,7 @@ export default createBuilder<Options>((options: Options, context: BuilderContext
     const buildTarget = {
       target: 'build',
       project: (context.target as Target).project,
-      configuration: options.configuration || ''
+      configuration: options.workspaceConfig || ''
     };
 
     // get the options of the build target
@@ -30,11 +30,12 @@ export default createBuilder<Options>((options: Options, context: BuilderContext
     const outputPath = buildOptions['outputPath'] as string;
     const indexPath = buildOptions['index'] as string;
 
-    readFile(outputPath + indexPath.substr(indexPath.lastIndexOf('/')), (err: NodeJS.ErrnoException, data: Buffer) => {
+    readFile(outputPath + indexPath.substring(indexPath.lastIndexOf('/')), (err: NodeJS.ErrnoException, data: Buffer) => {
       if (err) {
         reject(err.message);
       } else {
-        let apiUrl = 'https://maps.googleapis.com/maps/api/js?v=' + options.version;
+        // Google Maps API versios are n.nn (https://developers.google.com/maps/documentation/javascript/versions#choosing-a-version-number)
+        let apiUrl = 'https://maps.googleapis.com/maps/api/js?v=' + options.version.toFixed(2);
         
         if (options.key) {
           apiUrl += '&key=' + options.key;
